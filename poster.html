@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevOps Poster Template - Smart Hostel Management System</title>
+    <style>
+        :root {
+            --primary-blue: #0b2545;
+            --secondary-blue: #134074;
+            --accent-orange: #f26419;
+            --light-bg: #eef4f8;
+            --border-color: #8da9c4;
+            --success-green: #2a9d8f;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Standardized 3:4 Layout Grid Poster Aspect Ratio Box */
+        .poster-container {
+            width: 1200px;
+            background-color: white;
+            border: 4px solid var(--primary-blue);
+            padding: 25px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+        }
+
+        /* 1. Header Layout block with precise font rules scaling */
+        .poster-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 5px solid var(--accent-orange);
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header-logo {
+            width: 110px;
+            height: auto;
+        }
+
+        .header-center {
+            text-align: center;
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        .header-center h1 {
+            font-size: 85pt; /* Exact 80-100pt Requirement Constraint Checked */
+            font-weight: 900;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        .header-center h2 {
+            font-size: 40pt;
+            color: var(--accent-orange);
+            margin-top: 5px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        /* Meta block parameters mapping user specific criteria */
+        .meta-info-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            background-color: var(--light-bg);
+            border: 2px solid var(--border-color);
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+
+        .authors-info {
+            font-size: 42pt; /* Exact 40-50pt Specification Constraint Checked */
+            color: var(--primary-blue);
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .guide-info {
+            font-size: 42pt;
+            color: var(--primary-blue);
+            font-weight: 600;
+            text-align: right;
+            align-self: center;
+        }
+
+        /* Layout columns handling row-spanning architectures */
+        .poster-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        /* Structural container cards styling components */
+        .section-card {
+            border: 2px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section-header {
+            background-color: var(--primary-blue);
+            color: white;
+            font-size: 52pt; /* Exact 50-60pt Bold Section Header Requirement Checked */
+            font-weight: bold;
+            padding: 12px 18px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-content {
+            padding: 18px;
+            font-size: 26pt; /* Exact 24-36pt Body Text Specification Constraint Checked */
+            line-height: 1.5;
+            color: #222;
+            flex-grow: 1;
+        }
+
+        .span-2 { grid-column: span 2; }
+        .span-3 { grid-column: span 3; }
+
+        ul {
+            list-style-position: inside;
+            margin-left: 5px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* Flow graphic configurations element tags */
+        .flow-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            background: #fafafa;
+            border-radius: 6px;
+        }
+
+        .flow-step {
+            text-align: center;
+            flex: 1;
+            padding: 10px;
+            border: 2px dashed var(--border-color);
+            background: white;
+            border-radius: 4px;
+            font-size: 22pt;
+            font-weight: 600;
+        }
+
+        .flow-arrow {
+            font-size: 30pt;
+            color: var(--accent-orange);
+            font-weight: bold;
+            padding: 0 10px;
+        }
+
+        /* Tables & Diagrams element rendering layouts */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+            font-size: 22pt; /* Exact 20-28pt Matrix Labels Requirement Constraint Checked */
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: var(--secondary-blue);
+            color: white;
+        }
+
+        .pass-badge {
+            background-color: var(--success-green);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 20pt;
+            display: inline-block;
+        }
+
+        /* Layout for block 11 grid panels elements */
+        .results-gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        .mock-ui-box {
+            background: #333;
+            color: #00ff00;
+            font-family: monospace;
+            padding: 25px 10px;
+            border-radius: 6px;
+            font-size: 20pt;
+            border: 3px solid #555;
+            min-height: 130px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .mock-ui-box span {
+            color: white;
+            font-size: 16pt;
+            margin-top: 8px;
+        }
+
+        .footer-bar {
+            margin-top: 30px;
+            background-color: var(--primary-blue);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-size: 32pt;
+            font-weight: bold;
+            border-radius: 6px;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="poster-container">
+
+        <header class="poster-header">
+            <div class="header-logo">
+                <svg viewBox="0 0 100 50" width="110">
+                    <path d="M25,45 C35,45 45,35 50,25 C55,15 65,5 75,5 C85,5 95,15 95,25 C95,35 85,45 75,45 C65,45 55,35 50,25 C45,15 35,5 25,5 C15,5 5,15 5,25 C5,35 15,45 25,45 Z" fill="none" stroke="#0b2545" stroke-width="8"/>
+                    <path d="M25,45 C35,45 45,35 50,25 C55,15 65,5 75,5 C85,5 95,15 95,25 C95,35 85,45 75,45 C65,45 55,35 50,25 C45,15 35,5 25,5 C15,5 5,15 5,25 C5,35 15,45 25,45 Z" fill="none" stroke="#f26419" stroke-width="4" stroke-dasharray="10,5"/>
+                </svg>
+            </div>
+            <div class="header-center">
+                <h1>Smart Hostel Management System</h1>
+                <h2>CI/CD Automation & Layered Microservices Deployment</h2>
+            </div>
+            <div class="header-logo" style="text-align: right;">
+                <svg viewBox="0 0 50 50" width="80">
+                    <rect x="5" y="5" width="16" height="16" fill="#134074" />
+                    <rect x="29" y="5" width="16" height="16" fill="#f26419" />
+                    <rect x="5" y="29" width="16" height="16" fill="#8da9c4" />
+                    <circle cx="37" cy="37" r="9" fill="#0b2545" />
+                </svg>
+            </div>
+        </header>
+
+        <div class="meta-info-grid">
+            <div class="authors-info">
+                <strong>Prepared by:</strong> Zoya Hudli (SRN: 02FE23BCS056, Roll Number: 16)
+            </div>
+            <div class="guide-info">
+                <strong>Guide:</strong> Dr. Niranjan Muchandi
+            </div>
+        </div>
+
+        <main class="poster-grid">
+
+            <div class="section-card">
+                <div class="section-header">1. Background</div>
+                <div class="section-content">
+                    Traditional institutional hostel operations rely heavily on manually updating spreadsheets or monolithic software infrastructures. These practices present persistent real-time coordination challenges across rooms, bookings, and billing pipelines. This project addresses these limits by building a robust cloud-native system.
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">2. Problem Statement</div>
+                <div class="section-content">
+                    Manual operations introduce configuration errors, inconsistent system state parameters, billing overhead risks, and prolonged delays in deployment iteration cycles. The absence of automation patterns slows feature scaling and leads to operational delivery drops during peak booking timelines.
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">3. Objectives</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Automate build and container staging.</li>
+                        <li>Isolate execution steps via clean Docker layers.</li>
+                        <li>Deploy predictable runtimes using Kubernetes.</li>
+                        <li>Eliminate configuration errors across staging.</li>
+                        <li>Ensure end-to-end operational transparency.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">4. Requirement Specs</div>
+                <div class="section-content">
+                    <strong>Hardware Stack:</strong> Intel i5/equivalent, Minimum 8 GB RAM base configuration, 50 GB storage space allocation.<br><br>
+                    <strong>Software Stack:</strong> Ubuntu LTS Base Engine, Docker Suite v24+, Kubernetes Pod Cluster Control, Git Core, and Node.js execution runtimes.
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">5. Functional Requirements</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Automated Git webhook triggering mechanics.</li>
+                        <li>Isolated multi-stage container target compilations.</li>
+                        <li>Zero-downtime microservice instance scheduling.</li>
+                        <li>Persistent monitoring loop configurations.</li>
+                        <li>Rollback options for build state targets.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">6. System Architecture</div>
+                <div class="section-content">
+                    <div class="flow-container">
+                        <div class="flow-step">Local Commit</div>
+                        <div class="flow-arrow">&rarr;</div>
+                        <div class="flow-step">GitHub Hook</div>
+                        <div class="flow-arrow">&rarr;</div>
+                        <div class="flow-step">Jenkins CI</div>
+                        <div class="flow-arrow">&rarr;</div>
+                        <div class="flow-step">K8s Cluster</div>
+                    </div>
+                    <p style="margin-top: 10px; font-size: 22pt; color: #555; text-align: center;">
+                        Decoupled multi-tier deployment topology managing traffic isolation.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">7. DevOps Workflow</div>
+                <div class="section-content">
+                    <ul>
+                        <li><strong>Push:</strong> Microservice edits reach GitHub core main.</li>
+                        <li><strong>Trigger:</strong> Active webhooks call automation loops.</li>
+                        <li><strong>Build:</strong> Base Docker stages generate standard runtimes.</li>
+                        <li><strong>Deploy:</strong> Target configurations mount inside active K8s nodes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">8. Tools & Tech</div>
+                <div class="section-content">
+                    <strong>Git/GitHub:</strong> Version controls.<br>
+                    <strong>Jenkins:</strong> Orchestrates the execution sequence pipelines.<br>
+                    <strong>Docker:</strong> Packs code runtimes inside isolated containers.<br>
+                    <strong>Kubernetes:</strong> Schedules and scales independent pod groups.<br>
+                    <strong>Node.js:</strong> Serves responsive backend APIs.
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">9. System Layering Diagram</div>
+                <div class="section-content" style="text-align: center;">
+                    <div style="border: 2px solid var(--primary-blue); padding: 10px; background: var(--light-bg); font-size: 22pt; font-weight: bold; border-radius: 4px; margin-bottom: 8px;">
+                        Presentation Layer (UI/UX Clients)
+                    </div>
+                    <div style="font-size: 24pt; color: var(--accent-orange); margin: 2px 0;">&uarr;&darr; Express Router</div>
+                    <div style="border: 2px solid var(--primary-blue); padding: 10px; background: var(--light-bg); font-size: 22pt; font-weight: bold; border-radius: 4px; margin-bottom: 8px;">
+                        Business Logic (Controller Layer)
+                    </div>
+                    <div style="font-size: 24pt; color: var(--accent-orange); margin: 2px 0;">&uarr;&darr; ORM Model Bindings</div>
+                    <div style="border: 2px solid var(--primary-blue); padding: 10px; background: var(--light-bg); font-size: 22pt; font-weight: bold; border-radius: 4px;">
+                        Data Layer (Persistent MySQL Engine)
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card span-2">
+                <div class="section-header">10. Automation Testing Specifications</div>
+                <div class="section-content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Test Objective Description</th>
+                                <th>Expected Runtime Target Condition</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TC-01</td>
+                                <td>Push Event Pipeline Hook</td>
+                                <td>Webhook signals Jenkins system immediately</td>
+                                <td><span class="pass-badge">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>TC-02</td>
+                                <td>Multi-stage Image Compiles</td>
+                                <td>System builds isolated layer footprints</td>
+                                <td><span class="pass-badge">Pass</span></td>
+                            </tr>
+                            <tr>
+                                <td>TC-03</td>
+                                <td>Cluster Manifest Rollout</td>
+                                <td>Target pods update with zero service drops</td>
+                                <td><span class="pass-badge">Pass</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="section-card span-3">
+                <div class="section-header">11. Execution Pipeline Results & Logs Output</div>
+                <div class="section-content">
+                    <div class="results-gallery">
+                        <div class="mock-ui-box">
+                            SUCCESS: Stage [Build]
+                            <span>Duration: 42s</span>
+                        </div>
+                        <div class="mock-ui-box">
+                            IMAGE CREATED: v2.1.0
+                            <span>Size: 142MB (Optimized)</span>
+                        </div>
+                        <div class="mock-ui-box">
+                            K8S DEPLOYMENT DONE
+                            <span>3/3 Pods Ready [Running]</span>
+                        </div>
+                        <div class="mock-ui-box" style="color: #00ffff;">
+                            MYSQL HEALTHY
+                            <span>Active Connections: 14</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">12. Advantages</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Reduces deployment overhead times.</li>
+                        <li>Eliminated environmental differences across runs.</li>
+                        <li>Automated rollbacks prevent service downtime.</li>
+                        <li>Maintains transaction states reliably.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">13. Future Enhancements</div>
+                <div class="section-content">
+                    <ul>
+                        <li>Integrate infrastructure-as-code models via Terraform.</li>
+                        <li>Implement GitOps declarative setups via ArgoCD.</li>
+                        <li>Add Prometheus metrics visibility dashboards.</li>
+                        <li>Embed auto-scaling mechanisms for peak usage.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="section-card">
+                <div class="section-header">14. Conclusion</div>
+                <div class="section-content">
+                    Applying DevOps pipeline methods directly to the Smart Hostel Management project replaces slow, error-prone deployment loops with a fast, reliable, and scalable alternative. This setup guarantees stable institutional operations and sets up a robust modern framework for adding future updates without service friction.
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer-bar">
+            TEAM NUMBER: D-1
+        </footer>
+
+    </div>
+
+</body>
+</html>
