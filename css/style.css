@@ -118,7 +118,7 @@ ul { list-style: none; }
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #0ea5e9 100%);
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fad0c4 100%);
   color: #fff;
   padding: 5rem 1.5rem;
   text-align: center;
